@@ -1,0 +1,11 @@
+// wizard mutation types
+export const SET_CONFIG = 'SET_CONFIG'
+export const SET_STAGES = 'SET_STAGES'
+export const SET_ACTIVE_STAGE = 'SET_ACTIVE_STAGE'
+export const SET_CURRENT_TASKS = 'SET_CURRENT_TASKS'
+export const SET_CURRENT_CARDS = 'SET_CURRENT_CARDS'
+export const SET_ACTIVE_TASK = 'SET_ACTIVE_TASK'
+export const SET_ACTIVE_CARD = 'SET_ACTIVE_CARD'
+export const ADD_STAGES_DONE = 'ADD_STAGES_DONE'
+export const ADD_TASKS_DONE = 'ADD_TASKS_DONE'
+export const ADD_CARDS_DONE = 'ADD_CARDS_DONE'

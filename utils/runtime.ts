@@ -1,0 +1,27 @@
+import Vue from 'vue'
+
+interface Runtime {
+  vm?: Vue
+}
+
+const runtime: Runtime = {}
+
+/**
+ * Get runtime Vue instance.
+ */
+export function getRuntimeVM (): Vue {
+  if (runtime.vm) {
+    return runtime.vm
+  }
+  throw new ReferenceError('[vue-hooks] Not found vue instance.')
+}
+
+/**
+ * Set runtime Vue instance.
+ */
+export function setRuntimeVM (this: Vue, vue?: Vue) {
+  const vm = this || vue
+  if (typeof vm.$options.setup === 'function') {
+    runtime.vm = vm
+  }
+}

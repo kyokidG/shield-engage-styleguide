@@ -1,0 +1,46 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+/* Margin and Padding */
+$space-1: 5px;
+$space-2: 10px;
+$space-3: 15px;
+$space-4: 20px;
+$space-5: 25px;
+$space-6: 30px;
+$space-7: 35px;
+$space-8: 40px;
+
+// Borders
+$border-radius-input: 3px;
+$border-radius-btn: 4px;
+$border-radius-message: 5px;
+
+// Fonts
+$font-family-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-0: 11px;
+$font-size-1: 13px;
+$font-size-2: 15px;
+$font-size-3: 17px;
+$font-size-4: 20px;
+$font-size-5: 32px;
+
+// Colors
+$grey-light-0:	hsl(0, 0%, 47%);
+$grey-light-1:	hsl(0, 0%, 53%);
+$grey-light-2:	hsl(0, 0%, 60%);
+$grey-light-3:	hsl(0, 0%, 80%);
+$grey-light-4:	hsl(0, 0%, 87%);
+$white-ter: 	hsl(0, 0%, 97%);
+
+// Box
+$box-shadow-focus: none;
+
+/* Animation timings */
+$animation-duration-fast: 0.5s;
+$animation-duration-normal: 1s;
+$animation-duration-slow: 3s;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

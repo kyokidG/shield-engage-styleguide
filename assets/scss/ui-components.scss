@@ -1,0 +1,120 @@
+@import './helpers.scss';
+
+// common UI elements
+.btn-submit {
+  height: auto;
+  width: 100%;
+  @extend .pt4;
+  @extend .pb4;
+  font-family: $font-family-default;
+  font-size: $font-size-3;
+  background-color: $grey-light-4;
+  color: $grey-light-1;
+  border: 1px solid $grey-light-4;
+  border-radius: $border-radius-btn;
+}
+
+.message-body {
+  background-color: $white-ter;
+  border-radius: $border-radius-message;
+  border: 0;
+  font-family: $font-family-default;
+  font-size: $font-size-1;
+  color: $grey-light-2;
+}
+
+.title {
+  font-size: $font-size-5;
+  color: $grey-light-1;
+  padding-bottom: $space-3;
+}
+
+.text {
+  color: $grey-light-1;
+  font-size: $font-size-3;
+}
+
+.label {
+  color: $grey-light-2;
+  font-size: $font-size-2;
+  font-weight: bold;
+}
+
+.input {
+  color: $grey-light-0;
+  font-family: $font-family-default;
+  font-size: $font-size-3;
+  border-radius: $border-radius-input;
+  border: 1px solid $grey-light-3;
+  box-shadow: none;
+  &:focus {
+    border-color: $grey-light-3;
+    box-shadow: $box-shadow-focus;
+  }
+}
+
+.help {
+  font-family: $font-family-default;
+  font-size: $font-size-0;
+}
+
+.b-checkbox.checkbox {
+  align-items: flex-start !important;
+  input[type=checkbox] {
+    + .check {
+      border: 2px solid $grey-light-3;
+      box-shadow: none;
+    }
+    &:checked + .check {
+      background-color: $grey-light-3;
+      border-color: $grey-light-3;
+      box-shadow: none;
+    }
+    &:focus {
+      + .check {
+        box-shadow: none;
+      }
+      &:checked + .check {
+        box-shadow: none;
+      }
+    }
+  }
+  &:hover {
+    input[type=checkbox]:not(:disabled) + .check {
+      border-color: $grey-light-2;
+    }
+  }
+  .control-label {
+    color: $grey-light-0;
+    font-family: $font-family-default;
+    font-size: $font-size-2;
+    padding-left: $space-2;
+  }
+}
+
+.select {
+  width: 100%;
+  font-family: $font-family-default;
+  select {
+    width: 100%;
+    &:focus {
+      border-color: $grey-light-3;
+      box-shadow: $box-shadow-focus;
+    }
+  }
+  &:not(.is-multiple):not(.is-loading)::after {
+    border-color: $grey-light-1;
+  }
+}
+
+.file {
+  a.button {
+    font-family: $font-family-default;
+    font-size: $font-size-3;
+    background-color: $grey-light-4;
+    color: $grey-light-1;
+    border: 1px solid $grey-light-4;
+    border-radius: $border-radius-btn;
+    box-shadow: none;
+  }
+}

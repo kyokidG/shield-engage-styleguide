@@ -1,0 +1,81 @@
+// npm run storybook
+
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "esnext",
+    "strict": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "noEmit": false, //adding this line breaks storybook
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "webpack-env"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "~/*": [
+        "./*"
+      ],
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ]
+  },
+  "include": ["**/*.vue"],
+  "files": [
+    "utils/drag-drop/vue-smooth-dnd.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+// npm run dev
+
+// {
+//   "compilerOptions": {
+//     "target": "es2018",
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "lib": [
+//       "esnext",
+//       "esnext.asynciterable",
+//       "dom"
+//     ],
+//     "esModuleInterop": true,
+//     "allowJs": true,
+//     "sourceMap": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "~/*": [
+//         "./*"
+//       ],
+//       "@/*": [
+//         "./*"
+//       ]
+//     },
+//     "types": [
+//       "@types/node",
+//       "@nuxt/types"
+//     ]
+//   },
+//   "include": ["**/*.ts", "**/*.vue"],
+//   "files": [
+//     "utils/drag-drop/vue-smooth-dnd.d.ts"
+//   ],
+//   "exclude": [
+//     "node_modules"
+//   ]
+// }

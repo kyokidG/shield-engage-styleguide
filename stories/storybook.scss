@@ -1,0 +1,38 @@
+.storybook-container {
+    padding: 60px;
+    width: 100%;
+    height: 100%;
+    &.small {
+        padding: 150px;
+    }
+    &.large {
+        padding: 30px;
+    }
+}
+.copy-code-container #copy-code::before {
+    content: '👨‍💻';
+}
+
+.copy-code-container.code-on #copy-code::before {
+    content: "👌";
+}
+
+.copy-code-container .template {
+    display: block;
+}
+
+.copy-code-container.code-on .template {
+    display: none;
+}
+.source-code {
+    width: 100%;
+    height: 200px;
+}
+
+.copy-code-container .source-code {
+    display: none;
+}
+
+.copy-code-container.code-on .source-code {
+    display: block;
+}

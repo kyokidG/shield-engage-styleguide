@@ -1,0 +1,89 @@
+{
+  "name": "rbdg",
+  "version": "1.0.0",
+  "description": "My wondrous Nuxt.js project",
+  "author": "Eugen Guriev",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "test": "jest",
+    "test:one": "jest -t",
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint-fix": "eslint --fix --ext .ts,.js,.vue .",
+    "jscpd": "jscpd --ignore '.storybook/,.nuxt/**,stories/**/,node_modules/' --format 'css,scss,javascript,typescript' .",
+    "storybook": "start-storybook -p 9001 -c .storybook -s storybook-static",
+    "storybook:build": "build-storybook -c .storybook -o storybook-static -s storybook-static"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@nuxt/typescript-runtime": "latest",
+    "@nuxtjs/auth": "^4.8.5",
+    "@nuxtjs/axios": "^5.9.3",
+    "@types/jest": "^24.9.0",
+    "@types/lodash": "^4.14.149",
+    "@types/qs": "^6.9.0",
+    "@types/yup": "^0.26.27",
+    "@vue/composition-api": "^0.3.4",
+    "date-fns": "^2.9.0",
+    "defu": "^1.0.0",
+    "gojs": "^2.1.6",
+    "lodash": "^4.17.15",
+    "miragejs": "^0.1.33",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.2",
+    "qs": "^6.9.1",
+    "sanitize-html": "^1.21.1",
+    "ts-jest": "^24.3.0",
+    "vue-smooth-dnd": "^0.8.1",
+    "vue-wysiwyg": "^1.7.2",
+    "yup": "^0.28.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@nuxt/typescript-build": "^0.5.6",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/eslint-config-typescript": "^1.0.0",
+    "@storybook/addon-actions": "^5.3.12",
+    "@storybook/addon-knobs": "^5.3.12",
+    "@storybook/addon-links": "^5.3.12",
+    "@storybook/addon-notes": "^5.3.12",
+    "@storybook/addon-storysource": "^5.3.12",
+    "@storybook/addon-viewport": "^5.3.12",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/vue": "^5.3.12",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^6.8.0",
+    "husky": "^4.0.10",
+    "jest": "^24.9.0",
+    "jest-canvas-mock": "^2.2.0",
+    "jscpd": "^2.0.16",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-jest": "^4.0.0-0",
+    "vue-storybook": "^1.2.0"
+  },
+  "jscpd": {
+    "threshold": 0.1,
+    "minLines": 10,
+    "reporters": [
+      "console"
+    ],
+    "absolute": true,
+    "gitignore": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run jscpd && npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
