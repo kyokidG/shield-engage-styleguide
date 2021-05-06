@@ -36,7 +36,7 @@
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
     "qs": "^6.9.1",
-    "sanitize-html": "^1.21.1",
+    "sanitize-html": "^2.3.2",
     "ts-jest": "^24.3.0",
     "vue-smooth-dnd": "^0.8.1",
     "vue-wysiwyg": "^1.7.2",
